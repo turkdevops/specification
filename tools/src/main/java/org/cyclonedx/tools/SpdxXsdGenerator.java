@@ -30,10 +30,11 @@ import java.util.Set;
 
 public class SpdxXsdGenerator {
 
-    private static final String SPDX_VERSION = "3.12";
+    private static final String SPDX_VERSION = "3.24.0";
 
     public static void main(String args[]) throws Exception {
 
+        //todo : automatically obtain latest release from: https://api.github.com/repos/spdx/license-list-data/releases
         //todo : make configurable
         String licenseUrl = "https://raw.githubusercontent.com/spdx/license-list-data/v" + SPDX_VERSION + "/json/licenses.json";
         String exceptionsUrl = "https://raw.githubusercontent.com/spdx/license-list-data/v" + SPDX_VERSION + "/json/exceptions.json";
